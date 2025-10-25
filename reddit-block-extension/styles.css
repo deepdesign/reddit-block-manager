@@ -1,0 +1,410 @@
+/* Reddit Block Manager Styles - Old Reddit Design */
+
+/* Table header styling to match old Reddit */
+.reddit-block-manager-header {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.reddit-block-manager-header td {
+    padding: 8px 12px;
+    border-right: 1px solid #ccc;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.reddit-block-manager-header td:last-child {
+    border-right: none;
+}
+
+/* Remove hover effect from table header */
+.reddit-block-manager-header:hover {
+    background-color: #f0f0f0 !important;
+}
+
+.reddit-block-manager-header-text {
+    color: #333;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* RES Dark Mode Support for table header */
+.res-nightmode .reddit-block-manager-header {
+    background-color: #1a1a1b;
+    border-bottom-color: #343536;
+}
+
+.res-nightmode .reddit-block-manager-header:hover {
+    background-color: #1a1a1b !important;
+}
+
+.res-nightmode .reddit-block-manager-header-text {
+    color: #d7dadc;
+}
+
+/* Sortable column styling */
+.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.sortable:hover {
+    background-color: #e5e7eb;
+}
+
+.sort-indicator {
+    margin-left: 4px;
+    font-size: 10px;
+    color: #6b7280;
+}
+
+/* Select all checkbox styling */
+.reddit-block-manager-checkbox-header {
+    width: 60px;
+    text-align: center;
+}
+
+.select-all-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 11px;
+    color: #333;
+}
+
+.select-all-container input[type="checkbox"] {
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+/* User and date headers */
+.reddit-block-manager-user-header {
+    width: 25%;
+}
+
+.reddit-block-manager-date-header {
+    width: 15%;
+}
+
+/* Actions header with buttons */
+.reddit-block-manager-actions-header {
+    width: 35%;
+}
+
+.reddit-block-manager-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.reddit-block-manager-lock-header {
+    width: 60px;
+    text-align: center;
+}
+
+.reddit-block-manager-remove-header {
+    width: 120px;
+    text-align: center;
+}
+
+/* Reddit-style buttons */
+.reddit-button {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    background: #f6f7f8;
+    color: #333;
+    font-size: 11px;
+    cursor: pointer;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.reddit-button:hover:not(:disabled) {
+    background: #e9ecef;
+}
+
+.reddit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.reddit-button-danger {
+    background: #ff6b6b;
+    color: white;
+    border-color: #ff5252;
+}
+
+.reddit-button-danger:hover:not(:disabled) {
+    background: #ff5252;
+}
+
+.reddit-button-warning {
+    background: #ffd93d;
+    color: #333;
+    border-color: #ffc107;
+}
+
+.reddit-button-warning:hover:not(:disabled) {
+    background: #ffc107;
+}
+
+.reddit-button-secondary {
+    background: #6c757d;
+    color: white;
+    border-color: #5a6268;
+}
+
+.reddit-button-secondary:hover:not(:disabled) {
+    background: #5a6268;
+}
+
+.reddit-button-small {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-height: 28px;
+}
+
+.reddit-button-compact {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-height: 28px;
+    white-space: nowrap;
+}
+
+/* Tools toolbar */
+.reddit-block-manager-tools {
+    background: #f6f7f8;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* RES Dark Mode Support */
+.res-nightmode .reddit-block-manager-tools {
+    background: #1a1a1b;
+    border-color: #343536;
+    color: #d7dadc;
+}
+
+.reddit-block-manager-tools-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.reddit-block-manager-tools-left {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.reddit-block-manager-tools-right {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Reddit-style select dropdown */
+.reddit-select {
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    background: #f6f7f8;
+    color: #333;
+    font-size: 11px;
+    cursor: pointer;
+    border-radius: 3px;
+    min-width: 120px;
+}
+
+.reddit-select:hover {
+    background: #e9ecef;
+}
+
+.reddit-select:focus {
+    outline: none;
+    border-color: #0079d3;
+    box-shadow: 0 0 0 2px rgba(0, 121, 211, 0.2);
+}
+
+/* RES Dark Mode Support for dropdowns */
+.res-nightmode .reddit-select {
+    background: #1a1a1b;
+    border-color: #343536;
+    color: #d7dadc;
+}
+
+.res-nightmode .reddit-select:hover {
+    background: #2d2d2e;
+}
+
+.res-nightmode .reddit-select:focus {
+    border-color: #0079d3;
+    box-shadow: 0 0 0 2px rgba(0, 121, 211, 0.3);
+}
+
+/* Checkbox styles for table rows */
+.reddit-block-manager-checkbox-cell {
+    width: 40px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Lock button styles */
+.reddit-block-manager-lock-cell {
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px;
+}
+
+/* Remove button styles */
+.reddit-block-manager-remove-cell {
+    width: 120px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px;
+}
+
+.lock-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    transition: background-color 0.2s;
+    color: #666;
+}
+
+.lock-button:hover {
+    background-color: #f0f0f0;
+}
+
+.lock-button.locked {
+    color: #dc2626; /* red-600 */
+    background-color: #fef2f2; /* red-50 */
+}
+
+/* Locked user row styles */
+.reddit-block-manager-locked {
+    background-color: #f9f9f9 !important; /* very subtle red tint */
+    border-left: 2px solid #dc2626; /* red-600 */
+}
+
+.reddit-block-manager-locked td {
+    opacity: 1;
+}
+
+.reddit-block-manager-locked .reddit-block-manager-checkbox-cell input[type="checkbox"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* RES Dark Mode Support for locked users */
+.res-nightmode .reddit-block-manager-locked {
+    background-color: #2d2d2e !important;
+    border-left-color: #ff6b6b;
+}
+
+.res-nightmode .lock-button.locked {
+    color: #ff6b6b;
+    background-color: #3d1a1a;
+}
+
+/* Table styling to match old Reddit */
+.enemy-table table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+    table-layout: fixed;
+    max-width: 100%;
+}
+
+.enemy-table table td {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 8px 12px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.enemy-table table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* RES Dark Mode Support for table rows */
+.res-nightmode .enemy-table table tr:hover {
+    background-color: #2d2d2e;
+}
+
+.res-nightmode .enemy-table table td {
+    border-bottom-color: #343536;
+}
+
+/* Ensure the table stays within the content area */
+.content .usertable {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Match the original table column widths */
+.enemy-table table td:first-child {
+    width: 60px;
+}
+
+.enemy-table table td:nth-child(2) {
+    width: 25%;
+}
+
+.enemy-table table td:nth-child(3) {
+    width: 15%;
+}
+
+.enemy-table table td:nth-child(4) {
+    width: 35%;
+}
+
+.enemy-table table td:nth-child(5) {
+    width: 60px;
+}
+
+.enemy-table table td:last-child {
+    width: 120px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .reddit-block-manager-actions {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .reddit-button {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+}
