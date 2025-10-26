@@ -2,6 +2,8 @@
 // Based on actual Reddit page structure analysis
 (function() {
     'use strict';
+    
+    console.log('Reddit Block Manager: Script loaded on', window.location.href);
 
     // Configuration
     const CONFIG = {
@@ -31,6 +33,8 @@
      */
     function init() {
         console.log('Reddit Block Manager: Initializing...');
+        console.log('Reddit Block Manager: Current URL:', window.location.href);
+        console.log('Reddit Block Manager: Document ready state:', document.readyState);
         
         try {
             // Wait for the table to be present

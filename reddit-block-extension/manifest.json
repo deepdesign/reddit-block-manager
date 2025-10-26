@@ -13,7 +13,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://old.reddit.com/prefs/blocked/*"],
+      "matches": [
+        "https://old.reddit.com/prefs/blocked*",
+        "https://old.reddit.com/prefs/blocked/",
+        "https://www.reddit.com/prefs/blocked*",
+        "https://www.reddit.com/prefs/blocked/"
+      ],
       "js": ["content.js"],
       "css": ["styles.css"],
       "run_at": "document_end"
