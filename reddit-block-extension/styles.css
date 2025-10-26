@@ -654,8 +654,9 @@
     color: #1d4ed8;
 }
 
-/* Selection Info */
-.selection-info {
+/* Selection Info and Filter Feedback - Unified Styling */
+.selection-info,
+.filter-feedback {
     font-size: 13px;
     color: #6b7280;
     font-weight: 500;
@@ -663,14 +664,7 @@
     display: flex;
     align-items: center;
     height: 32px; /* Match dropdown height */
-}
-
-/* Filter Feedback */
-.filter-feedback {
-    font-size: 12px;
-    color: #9ca3af;
-    font-style: italic;
-    margin-right: 8px;
+    white-space: nowrap;
 }
 
 .selected-users-info {
@@ -764,15 +758,12 @@
     text-decoration: underline;
 }
 
-.res-nightmode .filter-feedback {
+.res-nightmode .filter-feedback,
+.res-nightmode .selection-info {
     color: #9ca3af;
 }
 
 .res-nightmode .filter-label {
-    color: #9ca3af;
-}
-
-.res-nightmode .selection-info {
     color: #9ca3af;
 }
 
