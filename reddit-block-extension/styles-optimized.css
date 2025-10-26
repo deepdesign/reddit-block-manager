@@ -1,0 +1,395 @@
+/* Reddit Block Manager - Optimized Styles */
+/* Consolidated and optimized CSS with removed redundancies */
+
+/* ===== BASE STYLES ===== */
+.elegant-toolbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.filter-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    flex: 1;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.filter-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.selection-info {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* ===== FORM ELEMENTS ===== */
+.elegant-select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    font-size: 13px;
+    color: #374151;
+    min-width: 120px;
+    transition: all 0.2s ease;
+}
+
+.elegant-select.narrow {
+    min-width: auto;
+    width: auto;
+    padding: 8px 8px;
+}
+
+.elegant-select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.elegant-select:hover {
+    border-color: #9ca3af;
+}
+
+/* ===== BUTTONS ===== */
+.elegant-button {
+    padding: 8px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 60px;
+}
+
+.elegant-button:hover:not(:disabled) {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.elegant-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.elegant-button.warning {
+    background: #fef3c7;
+    border-color: #f59e0b;
+    color: #92400e;
+}
+
+.elegant-button.warning:hover:not(:disabled) {
+    background: #fde68a;
+}
+
+.elegant-button.danger {
+    background: #fee2e2;
+    border-color: #ef4444;
+    color: #dc2626;
+}
+
+.elegant-button.danger:hover:not(:disabled) {
+    background: #fecaca;
+}
+
+.elegant-button.tertiary {
+    background: transparent;
+    border: none;
+    color: #6b7280;
+    text-decoration: underline;
+    min-width: auto;
+    padding: 8px 4px;
+}
+
+.elegant-button.tertiary:hover:not(:disabled) {
+    background: transparent;
+    color: #374151;
+}
+
+/* ===== TABLE STYLES ===== */
+.enemy-table table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0;
+    table-layout: fixed;
+    max-width: 100%;
+}
+
+.enemy-table table td {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 8px 12px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.enemy-table table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Column widths */
+.enemy-table table td:first-child {
+    width: 60px;
+}
+
+.enemy-table table td:nth-child(2) {
+    width: 35%;
+}
+
+.enemy-table table td:nth-child(3) {
+    width: 20%;
+}
+
+.enemy-table table td:nth-child(4) {
+    width: 50px;
+}
+
+.enemy-table table td:nth-child(5) {
+    width: 60px;
+}
+
+.enemy-table table td:last-child {
+    width: 120px;
+}
+
+/* ===== TABLE HEADER ===== */
+.reddit-block-manager-header {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.reddit-block-manager-header td {
+    padding: 8px 12px;
+    border-right: 1px solid #ccc;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.reddit-block-manager-header td:last-child {
+    border-right: none;
+}
+
+.reddit-block-manager-header:hover {
+    background-color: #f0f0f0 !important;
+}
+
+.reddit-block-manager-header-text {
+    color: #333;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.reddit-block-manager-checkbox-header {
+    width: 60px;
+    text-align: center;
+}
+
+/* ===== SORTING ===== */
+.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+.sortable:hover {
+    background-color: #e5e7eb;
+}
+
+.sort-indicator {
+    margin-left: 4px;
+    font-size: 10px;
+    color: #6b7280;
+}
+
+/* ===== LOCK FUNCTIONALITY ===== */
+.lock-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+    color: #666;
+}
+
+.lock-button:hover {
+    background-color: #f0f0f0;
+}
+
+.lock-button.locked {
+    color: #dc2626;
+    background-color: #fef2f2;
+}
+
+/* Locked user row styles */
+.reddit-block-manager-locked {
+    background-color: #f9f9f9 !important;
+    border-left: 2px solid #dc2626;
+}
+
+.reddit-block-manager-locked td {
+    opacity: 1;
+}
+
+.reddit-block-manager-locked .reddit-block-manager-checkbox-cell input[type="checkbox"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ===== HELP ICON ===== */
+.help-icon {
+    margin-left: 4px;
+    cursor: help;
+    font-style: normal;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 14px;
+    border-radius: 50%;
+    background-color: #9ca3af;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10px;
+    vertical-align: middle;
+    transition: background-color 0.2s ease;
+}
+
+.help-icon:hover {
+    background-color: #6b7280;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+.content .usertable {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* ===== RES DARK MODE SUPPORT ===== */
+.res-nightmode .elegant-toolbar {
+    background: #1a1a1b;
+    border-color: #343536;
+    color: #d7dadc;
+}
+
+.res-nightmode .filter-label {
+    color: #d7dadc;
+}
+
+.res-nightmode .elegant-select {
+    background: #1a1a1b;
+    border-color: #343536;
+    color: #d7dadc;
+}
+
+.res-nightmode .elegant-select:focus {
+    border-color: #3b82f6;
+}
+
+.res-nightmode .elegant-button {
+    background: #1a1a1b;
+    border-color: #343536;
+    color: #d7dadc;
+}
+
+.res-nightmode .elegant-button:hover:not(:disabled) {
+    background: #2d2d2e;
+}
+
+.res-nightmode .elegant-button.danger {
+    background: #3d1a1a;
+    border-color: #dc2626;
+    color: #ff6b6b;
+}
+
+.res-nightmode .elegant-button.danger:hover:not(:disabled) {
+    background: #4d1f1f;
+}
+
+.res-nightmode .elegant-button.tertiary {
+    color: #9ca3af;
+}
+
+.res-nightmode .elegant-button.tertiary:hover:not(:disabled) {
+    color: #d7dadc;
+}
+
+.res-nightmode .reddit-block-manager-header {
+    background-color: #1a1a1b;
+    border-bottom-color: #343536;
+}
+
+.res-nightmode .reddit-block-manager-header:hover {
+    background-color: #1a1a1b !important;
+}
+
+.res-nightmode .reddit-block-manager-header-text {
+    color: #d7dadc;
+}
+
+.res-nightmode .enemy-table table tr:hover {
+    background-color: #2d2d2e;
+}
+
+.res-nightmode .enemy-table table td {
+    border-bottom-color: #343536;
+}
+
+.res-nightmode .reddit-block-manager-locked {
+    background-color: #2d2d2e !important;
+    border-left-color: #ff6b6b;
+}
+
+.res-nightmode .lock-button.locked {
+    color: #ff6b6b;
+    background-color: #3d1a1a;
+}
+
+.res-nightmode .selection-info {
+    color: #9ca3af;
+}
+
+.res-nightmode .help-icon {
+    background-color: #6b7280;
+}
+
+.res-nightmode .help-icon:hover {
+    background-color: #9ca3af;
+}

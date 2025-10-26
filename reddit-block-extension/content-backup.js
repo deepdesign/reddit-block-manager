@@ -25,10 +25,7 @@
         }
     };
 
-    /**
-     * Initialize the plugin with enhanced error handling
-     * @description Main initialization function that sets up all components
-     */
+    // Initialize the plugin
     function init() {
         console.log('Reddit Block Manager: Initializing...');
         
@@ -428,20 +425,8 @@
 
     // Add sorting functionality
     function addSorting() {
-        try {
-            const sortableHeaders = document.querySelectorAll('.sortable');
-            sortableHeaders.forEach(header => {
-                header.addEventListener('click', () => {
-                    const sortType = header.dataset.sort;
-                    if (sortType) {
-                        handleColumnSort(sortType);
-                    }
-                });
-            });
-            console.log('Reddit Block Manager: Sorting functionality added');
-        } catch (error) {
-            console.error('Reddit Block Manager: Failed to add sorting:', error);
-        }
+        // This will be implemented to sort by downvote scores
+        // The vote weight data is available in the HTML
     }
 
     // Bind event listeners

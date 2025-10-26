@@ -53,3 +53,12 @@ temp/
 *.bak
 *.backup
 *.old
+
+# Development and testing files
+archive/
+examples/test-*.html
+docs/draft-*.md
+
+# Reddit saved pages (development only)
+*block page*
+*messaging preferences*
