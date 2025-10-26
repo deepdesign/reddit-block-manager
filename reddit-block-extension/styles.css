@@ -166,6 +166,17 @@
     background: #5a6268;
 }
 
+.reddit-button-tertiary {
+    background: #f8f9fa;
+    color: #6c757d;
+    border-color: #dee2e6;
+}
+
+.reddit-button-tertiary:hover:not(:disabled) {
+    background: #e9ecef;
+    color: #495057;
+}
+
 .reddit-button-small {
     padding: 6px 12px;
     font-size: 12px;
@@ -212,6 +223,8 @@
     display: flex;
     gap: 8px;
     align-items: center;
+    flex: 1;
+    justify-content: center;
 }
 
 /* Reddit-style select dropdown */
@@ -377,15 +390,15 @@
 }
 
 .enemy-table table td:nth-child(2) {
-    width: 25%;
+    width: 35%;
 }
 
 .enemy-table table td:nth-child(3) {
-    width: 15%;
+    width: 20%;
 }
 
 .enemy-table table td:nth-child(4) {
-    width: 35%;
+    width: 50px;
 }
 
 .enemy-table table td:nth-child(5) {
@@ -397,10 +410,411 @@
 }
 
 /* Responsive design */
+/* Recipe Builder Styling */
+.recipe-builder {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+}
+
+.recipe-text {
+    font-size: 12px;
+    color: #495057;
+    white-space: nowrap;
+}
+
+.recipe-select {
+    min-width: 80px;
+    font-size: 11px;
+    padding: 3px 6px;
+}
+
+/* Apply Recipe Button - Make it stand out */
+#apply-recipe {
+    background-color: #0079d3 !important;
+    color: white !important;
+    border: 1px solid #0079d3 !important;
+    font-weight: bold !important;
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+    min-height: 28px !important;
+}
+
+#apply-recipe:hover {
+    background-color: #005bb5 !important;
+    border-color: #005bb5 !important;
+}
+
+#apply-recipe:active {
+    background-color: #004a8f !important;
+}
+
+/* RES Dark Mode for Recipe Builder */
+.res-nightmode .recipe-builder {
+    background: #1a1a1b;
+    border-color: #343536;
+}
+
+.res-nightmode .recipe-text {
+    color: #d7dadc;
+}
+
+/* RES Dark Mode for Apply Recipe Button */
+.res-nightmode #apply-recipe {
+    background-color: #0079d3 !important;
+    color: white !important;
+    border-color: #0079d3 !important;
+}
+
+.res-nightmode #apply-recipe:hover {
+    background-color: #005bb5 !important;
+    border-color: #005bb5 !important;
+}
+
+/* Elegant Minimal Layout */
+.elegant-toolbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.filter-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    flex: 1;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.filter-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.help-icon {
+    margin-left: 4px;
+    cursor: help;
+    font-style: normal;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    line-height: 14px;
+    border-radius: 50%;
+    background-color: #9ca3af;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10px;
+    vertical-align: middle;
+    transition: background-color 0.2s ease;
+}
+
+.help-icon:hover {
+    background-color: #6b7280;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Elegant Select */
+.elegant-select {
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    font-size: 13px;
+    color: #374151;
+    min-width: 120px;
+    transition: all 0.2s ease;
+}
+
+.elegant-select.narrow {
+    min-width: auto;
+    width: auto;
+    padding: 8px 8px;
+}
+
+/* Filter Groups */
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.filter-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+}
+
+.elegant-select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.elegant-select:hover {
+    border-color: #9ca3af;
+}
+
+/* Elegant Button */
+.elegant-button {
+    padding: 8px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #374151;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 60px;
+}
+
+.elegant-button:hover:not(:disabled) {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.elegant-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.elegant-button.warning {
+    background: #fef3c7;
+    border-color: #f59e0b;
+    color: #92400e;
+}
+
+.elegant-button.warning:hover:not(:disabled) {
+    background: #fde68a;
+}
+
+.elegant-button.danger {
+    background: #fee2e2;
+    border-color: #ef4444;
+    color: #dc2626;
+}
+
+.elegant-button.danger:hover:not(:disabled) {
+    background: #fecaca;
+}
+
+.elegant-button.secondary {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+    color: #6b7280;
+}
+
+.elegant-button.secondary:hover:not(:disabled) {
+    background: #e5e7eb;
+}
+
+.elegant-button.tertiary {
+    background: transparent;
+    border: 1px solid #d1d5db;
+    color: #3b82f6;
+    text-decoration: underline;
+    padding: 8px 16px;
+    min-width: 60px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.elegant-button.tertiary:hover:not(:disabled) {
+    background: rgba(59, 130, 246, 0.1);
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+/* Selection Info */
+.selection-info {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    height: 32px; /* Match dropdown height */
+}
+
+/* Filter Feedback */
+.filter-feedback {
+    font-size: 12px;
+    color: #9ca3af;
+    font-style: italic;
+    margin-right: 8px;
+}
+
+.selected-users-info {
+    font-size: 11px;
+    color: #6c757d;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Vote Score Column */
+.reddit-block-manager-vote-cell {
+    width: 80px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px;
+}
+
+.vote-score {
+    font-size: 11px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* RES Dark Mode for compact layout */
+.res-nightmode .reddit-block-manager-compact-toolbar {
+    background: #1a1a1b;
+    border-color: #343536;
+}
+
+/* RES Dark Mode for Elegant Design */
+.res-nightmode .elegant-toolbar {
+    background: #1a1a1b;
+    border-color: #343536;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.res-nightmode .elegant-select {
+    background: #2d2d2e;
+    border-color: #343536;
+    color: #d7dadc;
+}
+
+.res-nightmode .elegant-select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.res-nightmode .elegant-select:hover {
+    border-color: #4a5568;
+}
+
+.res-nightmode .elegant-button {
+    background: #2d2d2e;
+    border-color: #343536;
+    color: #d7dadc;
+}
+
+.res-nightmode .elegant-button:hover:not(:disabled) {
+    background: #343536;
+    border-color: #4a5568;
+}
+
+.res-nightmode .elegant-button.warning {
+    background: #3d2914;
+    border-color: #f59e0b;
+    color: #fbbf24;
+}
+
+.res-nightmode .elegant-button.danger {
+    background: #3d1a1a;
+    border-color: #ef4444;
+    color: #fca5a5;
+}
+
+.res-nightmode .elegant-button.secondary {
+    background: #2d2d2e;
+    border-color: #343536;
+    color: #9ca3af;
+}
+
+.res-nightmode .elegant-button.tertiary {
+    background: transparent;
+    border-color: #343536;
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.res-nightmode .elegant-button.tertiary:hover:not(:disabled) {
+    background: rgba(96, 165, 250, 0.1);
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+.res-nightmode .filter-feedback {
+    color: #9ca3af;
+}
+
+.res-nightmode .filter-label {
+    color: #9ca3af;
+}
+
+.res-nightmode .selection-info {
+    color: #9ca3af;
+}
+
+.res-nightmode .selected-users-info {
+    color: #d7dadc;
+}
+
+.res-nightmode .recipe-text {
+    color: #d7dadc;
+}
+
+.res-nightmode .vote-score {
+    color: #d7dadc;
+}
+
+.res-nightmode .reddit-button-tertiary {
+    background: #1a1a1b !important;
+    color: #d7dadc !important;
+    border-color: #343536 !important;
+}
+
+.res-nightmode .reddit-button-tertiary:hover:not(:disabled) {
+    background: #343536 !important;
+    color: #ffffff !important;
+}
+
 @media (max-width: 768px) {
-    .reddit-block-manager-actions {
+    .reddit-block-manager-compact-toolbar {
         flex-direction: column;
-        gap: 4px;
+        gap: 8px;
+        align-items: stretch;
+    }
+    
+    .toolbar-left,
+    .toolbar-center,
+    .toolbar-right {
+        justify-content: center;
+    }
+    
+    .recipe-builder-compact {
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .reddit-button {
