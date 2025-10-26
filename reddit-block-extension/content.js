@@ -172,11 +172,11 @@
                     Apply
                 </button>
 
-                <span id="selected-count" class="selection-info">0 selected</span>
+                <span id="filter-feedback" class="filter-feedback">Loading...</span>
             </div>
             
             <div class="right-section">
-                <span id="filter-feedback" class="filter-feedback">Loading...</span>
+                <span id="selected-count" class="selection-info">0 selected</span>
                 <button id="lock-selected" class="elegant-button warning" disabled>
                     Lock
                 </button>
