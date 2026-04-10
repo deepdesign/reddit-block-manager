@@ -106,7 +106,7 @@
                 }
                 
                 // Disable and grey out the unblock button for locked users
-                const unblockButton = row.querySelector('.reddit-button-danger');
+                const unblockButton = row.querySelector('.reddit-block-manager-remove-cell .elegant-button.danger');
                 if (unblockButton) {
                     unblockButton.disabled = true;
                     unblockButton.style.opacity = '0.5';
@@ -502,10 +502,11 @@
             }
         });
 
-        // Individual remove buttons
+        // Individual remove buttons (per-row; header bulk button has no data-username)
         document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('reddit-button-danger') && e.target.dataset.username) {
-                handleIndividualRemove(e.target);
+            const btn = e.target.closest('.reddit-block-manager-remove-cell .elegant-button.danger');
+            if (btn && btn.dataset.username) {
+                handleIndividualRemove(btn);
             }
         });
 
@@ -1169,7 +1170,7 @@
             button.innerHTML = '🔓';
             
             // Re-enable the unblock button
-            const unblockButton = row.querySelector('.reddit-button-danger');
+            const unblockButton = row.querySelector('.reddit-block-manager-remove-cell .elegant-button.danger');
             if (unblockButton) {
                 unblockButton.disabled = false;
                 unblockButton.style.opacity = '1';
@@ -1184,7 +1185,7 @@
             button.innerHTML = '🔒';
             
             // Disable and grey out the unblock button
-            const unblockButton = row.querySelector('.reddit-button-danger');
+            const unblockButton = row.querySelector('.reddit-block-manager-remove-cell .elegant-button.danger');
             if (unblockButton) {
                 unblockButton.disabled = true;
                 unblockButton.style.opacity = '0.5';
